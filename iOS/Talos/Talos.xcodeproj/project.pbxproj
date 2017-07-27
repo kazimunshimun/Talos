@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD9767621F271E4900F27A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9767601F271E4900F27A72 /* Main.storyboard */; };
+		CD9767641F271E4900F27A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9767631F271E4900F27A72 /* Assets.xcassets */; };
+		CD9767671F271E4900F27A72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9767651F271E4900F27A72 /* LaunchScreen.storyboard */; };
+		CD97677B1F27218900F27A72 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD97677A1F27218900F27A72 /* ViewController.m */; };
+		CD97677E1F27219100F27A72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD97677D1F27219100F27A72 /* AppDelegate.m */; };
+		CD9767811F27219900F27A72 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD97677F1F27219900F27A72 /* Info.plist */; };
+		CD9767821F27219900F27A72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9767801F27219900F27A72 /* main.m */; };
+		CDAF57041F29AEBD0023558A /* GenderSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAF57031F29AEBD0023558A /* GenderSelectionView.m */; };
+		CDAF57071F2A0DEA0023558A /* AgeSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAF57061F2A0DEA0023558A /* AgeSelectionView.m */; };
+		CDAF570A1F2A0E060023558A /* WeightSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAF57091F2A0E060023558A /* WeightSelectionView.m */; };
+		CDAF570D1F2A0E170023558A /* HeightSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAF570C1F2A0E170023558A /* HeightSelectionView.m */; };
+		CDAF57101F2A0E2A0023558A /* FitnessGoalSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAF570F1F2A0E2A0023558A /* FitnessGoalSelectionView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CD9767541F271E4900F27A72 /* Talos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD9767611F271E4900F27A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD9767631F271E4900F27A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD9767661F271E4900F27A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD9767791F27218900F27A72 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CD97677A1F27218900F27A72 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CD97677C1F27219100F27A72 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CD97677D1F27219100F27A72 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CD97677F1F27219900F27A72 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD9767801F27219900F27A72 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CDAF57021F29AEBD0023558A /* GenderSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenderSelectionView.h; sourceTree = "<group>"; };
+		CDAF57031F29AEBD0023558A /* GenderSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenderSelectionView.m; sourceTree = "<group>"; };
+		CDAF57051F2A0DEA0023558A /* AgeSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgeSelectionView.h; sourceTree = "<group>"; };
+		CDAF57061F2A0DEA0023558A /* AgeSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgeSelectionView.m; sourceTree = "<group>"; };
+		CDAF57081F2A0E060023558A /* WeightSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightSelectionView.h; sourceTree = "<group>"; };
+		CDAF57091F2A0E060023558A /* WeightSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightSelectionView.m; sourceTree = "<group>"; };
+		CDAF570B1F2A0E170023558A /* HeightSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeightSelectionView.h; sourceTree = "<group>"; };
+		CDAF570C1F2A0E170023558A /* HeightSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeightSelectionView.m; sourceTree = "<group>"; };
+		CDAF570E1F2A0E2A0023558A /* FitnessGoalSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitnessGoalSelectionView.h; sourceTree = "<group>"; };
+		CDAF570F1F2A0E2A0023558A /* FitnessGoalSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitnessGoalSelectionView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD9767511F271E4800F27A72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD97674B1F271E4800F27A72 = {
+			isa = PBXGroup;
+			children = (
+				CD9767561F271E4900F27A72 /* Talos */,
+				CD9767551F271E4900F27A72 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD9767551F271E4900F27A72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD9767541F271E4900F27A72 /* Talos.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD9767561F271E4900F27A72 /* Talos */ = {
+			isa = PBXGroup;
+			children = (
+				CD97676E1F27213E00F27A72 /* Categories */,
+				CD97676F1F27213E00F27A72 /* Controllers */,
+				CD9767701F27213E00F27A72 /* DataSources */,
+				CD9767711F27213E00F27A72 /* Delegates */,
+				CD9767831F27220F00F27A72 /* Libraries */,
+				CD9767721F27213E00F27A72 /* Managers */,
+				CD9767731F27213E00F27A72 /* Models */,
+				CD9767741F27213E00F27A72 /* Resources */,
+				CD9767751F27213E00F27A72 /* Storyboards */,
+				CD9767761F27213E00F27A72 /* SupportingFiles */,
+				CD9767771F27213E00F27A72 /* Utils */,
+				CD9767781F27213E00F27A72 /* Views */,
+				CD9767631F271E4900F27A72 /* Assets.xcassets */,
+				CD9767571F271E4900F27A72 /* Supporting Files */,
+			);
+			path = Talos;
+			sourceTree = "<group>";
+		};
+		CD9767571F271E4900F27A72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD97676E1F27213E00F27A72 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		CD97676F1F27213E00F27A72 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD9767791F27218900F27A72 /* ViewController.h */,
+				CD97677A1F27218900F27A72 /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CD9767701F27213E00F27A72 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		CD9767711F27213E00F27A72 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				CD97677C1F27219100F27A72 /* AppDelegate.h */,
+				CD97677D1F27219100F27A72 /* AppDelegate.m */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		CD9767721F27213E00F27A72 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CD9767731F27213E00F27A72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD9767741F27213E00F27A72 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CD9767751F27213E00F27A72 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CD9767601F271E4900F27A72 /* Main.storyboard */,
+				CD9767651F271E4900F27A72 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CD9767761F27213E00F27A72 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CD97677F1F27219900F27A72 /* Info.plist */,
+				CD9767801F27219900F27A72 /* main.m */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		CD9767771F27213E00F27A72 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CD9767781F27213E00F27A72 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CDAF57011F29AE7E0023558A /* Walkthrough */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD9767831F27220F00F27A72 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		CDAF57011F29AE7E0023558A /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				CDAF57021F29AEBD0023558A /* GenderSelectionView.h */,
+				CDAF57031F29AEBD0023558A /* GenderSelectionView.m */,
+				CDAF57051F2A0DEA0023558A /* AgeSelectionView.h */,
+				CDAF57061F2A0DEA0023558A /* AgeSelectionView.m */,
+				CDAF57081F2A0E060023558A /* WeightSelectionView.h */,
+				CDAF57091F2A0E060023558A /* WeightSelectionView.m */,
+				CDAF570B1F2A0E170023558A /* HeightSelectionView.h */,
+				CDAF570C1F2A0E170023558A /* HeightSelectionView.m */,
+				CDAF570E1F2A0E2A0023558A /* FitnessGoalSelectionView.h */,
+				CDAF570F1F2A0E2A0023558A /* FitnessGoalSelectionView.m */,
+			);
+			name = Walkthrough;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD9767531F271E4800F27A72 /* Talos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD97676B1F271E4900F27A72 /* Build configuration list for PBXNativeTarget "Talos" */;
+			buildPhases = (
+				CD9767501F271E4800F27A72 /* Sources */,
+				CD9767511F271E4800F27A72 /* Frameworks */,
+				CD9767521F271E4800F27A72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Talos;
+			productName = Talos;
+			productReference = CD9767541F271E4900F27A72 /* Talos.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD97674C1F271E4800F27A72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = mTeam;
+				TargetAttributes = {
+					CD9767531F271E4800F27A72 = {
+						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CD97674F1F271E4800F27A72 /* Build configuration list for PBXProject "Talos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD97674B1F271E4800F27A72;
+			productRefGroup = CD9767551F271E4900F27A72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD9767531F271E4800F27A72 /* Talos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD9767521F271E4800F27A72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD9767811F27219900F27A72 /* Info.plist in Resources */,
+				CD9767671F271E4900F27A72 /* LaunchScreen.storyboard in Resources */,
+				CD9767641F271E4900F27A72 /* Assets.xcassets in Resources */,
+				CD9767621F271E4900F27A72 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD9767501F271E4800F27A72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD97677E1F27219100F27A72 /* AppDelegate.m in Sources */,
+				CDAF570D1F2A0E170023558A /* HeightSelectionView.m in Sources */,
+				CDAF570A1F2A0E060023558A /* WeightSelectionView.m in Sources */,
+				CD9767821F27219900F27A72 /* main.m in Sources */,
+				CDAF57071F2A0DEA0023558A /* AgeSelectionView.m in Sources */,
+				CDAF57101F2A0E2A0023558A /* FitnessGoalSelectionView.m in Sources */,
+				CDAF57041F29AEBD0023558A /* GenderSelectionView.m in Sources */,
+				CD97677B1F27218900F27A72 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CD9767601F271E4900F27A72 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD9767611F271E4900F27A72 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CD9767651F271E4900F27A72 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD9767661F271E4900F27A72 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD9767691F271E4900F27A72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CD97676A1F271E4900F27A72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD97676C1F271E4900F27A72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/Talos/SupportingFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anik.ios.Talos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CD97676D1F271E4900F27A72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/Talos/SupportingFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anik.ios.Talos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD97674F1F271E4800F27A72 /* Build configuration list for PBXProject "Talos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD9767691F271E4900F27A72 /* Debug */,
+				CD97676A1F271E4900F27A72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD97676B1F271E4900F27A72 /* Build configuration list for PBXNativeTarget "Talos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD97676C1F271E4900F27A72 /* Debug */,
+				CD97676D1F271E4900F27A72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD97674C1F271E4800F27A72 /* Project object */;
+}

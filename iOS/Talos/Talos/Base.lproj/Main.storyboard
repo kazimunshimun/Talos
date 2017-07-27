@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="1hx-zt-XWd">
+                                <rect key="frame" x="151.5" y="610" width="71" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.0" green="0.65480202440000002" blue="0.89624077079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l42-tT-RcR">
+                                <rect key="frame" x="58" y="606" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="Fna-1v-1e4"/>
+                                    <constraint firstAttribute="height" constant="44" id="yoX-eo-i4Q"/>
+                                </constraints>
+                                <state key="normal" image="privious"/>
+                                <connections>
+                                    <action selector="previousButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PSc-c2-d0b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPU-3a-ZaJ">
+                                <rect key="frame" x="272" y="606" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="QU0-Co-vUr"/>
+                                    <constraint firstAttribute="height" constant="44" id="n1E-84-7Gn"/>
+                                </constraints>
+                                <state key="normal" image="next"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aom-FF-Bgh"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ni9-nN-wQP">
+                                <rect key="frame" x="0.0" y="119" width="375" height="483"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4g-de-sfs">
+                                <rect key="frame" x="16" y="40" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="UKh-Ki-dPi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bw-Ra-MU7">
+                                <rect key="frame" x="16" y="69" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="gUw-hH-8CQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="2bw-Ra-MU7" secondAttribute="leading" id="1lb-Xo-K3c"/>
+                            <constraint firstItem="ni9-nN-wQP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="7hW-vx-4nf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="h4g-de-sfs" secondAttribute="leading" id="DE4-7E-iMe"/>
+                            <constraint firstItem="2bw-Ra-MU7" firstAttribute="top" secondItem="h4g-de-sfs" secondAttribute="bottom" constant="8" id="Epg-Dl-kYU"/>
+                            <constraint firstItem="bPU-3a-ZaJ" firstAttribute="centerY" secondItem="1hx-zt-XWd" secondAttribute="centerY" id="GXs-5X-JKC"/>
+                            <constraint firstItem="ni9-nN-wQP" firstAttribute="top" secondItem="2bw-Ra-MU7" secondAttribute="bottom" constant="8" id="JcV-oz-cRd"/>
+                            <constraint firstItem="h4g-de-sfs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="N0h-f9-mkl"/>
+                            <constraint firstItem="l42-tT-RcR" firstAttribute="top" secondItem="ni9-nN-wQP" secondAttribute="bottom" constant="4" id="TLd-GQ-9Ab"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h4g-de-sfs" secondAttribute="trailing" id="dnd-EE-2QL"/>
+                            <constraint firstItem="1hx-zt-XWd" firstAttribute="leading" secondItem="l42-tT-RcR" secondAttribute="trailing" constant="50" id="dpr-Oc-Db3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2bw-Ra-MU7" secondAttribute="trailing" id="jei-V3-Dfl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1hx-zt-XWd" secondAttribute="bottom" constant="20" id="kNl-p9-1vY"/>
+                            <constraint firstItem="bPU-3a-ZaJ" firstAttribute="leading" secondItem="1hx-zt-XWd" secondAttribute="trailing" constant="50" id="m3y-OV-Ark"/>
+                            <constraint firstItem="1hx-zt-XWd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nqT-0k-K8N"/>
+                            <constraint firstItem="l42-tT-RcR" firstAttribute="centerY" secondItem="1hx-zt-XWd" secondAttribute="centerY" id="tVh-8O-5Ef"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ni9-nN-wQP" secondAttribute="trailing" constant="-16" id="zI0-EU-bZz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mDescriptionLabel" destination="2bw-Ra-MU7" id="zrp-4a-Gdg"/>
+                        <outlet property="mNextButton" destination="bPU-3a-ZaJ" id="71T-O0-kfi"/>
+                        <outlet property="mPageControl" destination="1hx-zt-XWd" id="5kJ-9S-aFn"/>
+                        <outlet property="mPreviousButton" destination="l42-tT-RcR" id="myQ-jk-Chs"/>
+                        <outlet property="mScrollView" destination="ni9-nN-wQP" id="2YK-o8-1PB"/>
+                        <outlet property="mTitleLabel" destination="h4g-de-sfs" id="3Wx-em-7MK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="next" width="128" height="128"/>
+        <image name="privious" width="128" height="128"/>
+    </resources>
+</document>
