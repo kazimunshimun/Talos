@@ -7,6 +7,7 @@
 //
 
 #import "GenderSelectionView.h"
+#import "GenderSwitch.h"
 
 @implementation GenderSelectionView
 
@@ -24,16 +25,21 @@
     // Drawing code
     CGRect bounds = [self bounds];
     
-    [[UIColor greenColor] set];
+    [[UIColor whiteColor] set];
     UIRectFill(bounds);
     
-    CGRect square = CGRectMake(10, 10, 10, 100);
-    [[UIColor blackColor] set];
-    UIRectFill(square);
+    // Example of a bigger switch with images
+    GenderSwitch *mySwitch2 = [[GenderSwitch alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
+    mySwitch2.center = CGPointMake(200, 200);
+   // [mySwitch2 addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+    mySwitch2.offImage = [UIImage imageNamed:@"women"];
+    mySwitch2.onImage = [UIImage imageNamed:@"man"];
+    mySwitch2.onTintColor = [UIColor blueColor];
+  //  mySwitch2.isRounded = NO;
+    [self addSubview:mySwitch2];
     
-    [[UIColor redColor] set];
-    UIRectFill(square);
-    NSLog(@"drawRect called");
+    // turn the switch on with animation
+    [mySwitch2 setOn:YES animated:YES];
 }
 
 

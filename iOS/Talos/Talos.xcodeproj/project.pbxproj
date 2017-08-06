@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD1AD6151F3741F100B6CCC8 /* GenderSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1AD6141F3741F100B6CCC8 /* GenderSwitch.m */; };
 		CD9767621F271E4900F27A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9767601F271E4900F27A72 /* Main.storyboard */; };
 		CD9767641F271E4900F27A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9767631F271E4900F27A72 /* Assets.xcassets */; };
 		CD9767671F271E4900F27A72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9767651F271E4900F27A72 /* LaunchScreen.storyboard */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD1AD6131F3741F100B6CCC8 /* GenderSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenderSwitch.h; sourceTree = "<group>"; };
+		CD1AD6141F3741F100B6CCC8 /* GenderSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenderSwitch.m; sourceTree = "<group>"; };
 		CD9767541F271E4900F27A72 /* Talos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9767611F271E4900F27A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD9767631F271E4900F27A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD1AD6121F3741D300B6CCC8 /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				CD1AD6131F3741F100B6CCC8 /* GenderSwitch.h */,
+				CD1AD6141F3741F100B6CCC8 /* GenderSwitch.m */,
+			);
+			name = Switch;
+			sourceTree = "<group>";
+		};
 		CD97674B1F271E4800F27A72 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +192,7 @@
 		CD9767781F27213E00F27A72 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CD1AD6121F3741D300B6CCC8 /* Switch */,
 				CDAF57011F29AE7E0023558A /* Walkthrough */,
 			);
 			path = Views;
@@ -289,6 +302,7 @@
 				CDAF57071F2A0DEA0023558A /* AgeSelectionView.m in Sources */,
 				CDAF57101F2A0E2A0023558A /* FitnessGoalSelectionView.m in Sources */,
 				CDAF57041F29AEBD0023558A /* GenderSelectionView.m in Sources */,
+				CD1AD6151F3741F100B6CCC8 /* GenderSwitch.m in Sources */,
 				CD97677B1F27218900F27A72 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
