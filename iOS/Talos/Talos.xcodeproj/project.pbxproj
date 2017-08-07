@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD04C66C1F38710400E8C5D3 /* MaleFemaleSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = CD04C66B1F38710400E8C5D3 /* MaleFemaleSwitch.m */; };
 		CD1AD6151F3741F100B6CCC8 /* GenderSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1AD6141F3741F100B6CCC8 /* GenderSwitch.m */; };
 		CD9767621F271E4900F27A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9767601F271E4900F27A72 /* Main.storyboard */; };
 		CD9767641F271E4900F27A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9767631F271E4900F27A72 /* Assets.xcassets */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD04C66A1F38710400E8C5D3 /* MaleFemaleSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaleFemaleSwitch.h; sourceTree = "<group>"; };
+		CD04C66B1F38710400E8C5D3 /* MaleFemaleSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaleFemaleSwitch.m; sourceTree = "<group>"; };
 		CD1AD6131F3741F100B6CCC8 /* GenderSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenderSwitch.h; sourceTree = "<group>"; };
 		CD1AD6141F3741F100B6CCC8 /* GenderSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenderSwitch.m; sourceTree = "<group>"; };
 		CD9767541F271E4900F27A72 /* Talos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +66,8 @@
 			children = (
 				CD1AD6131F3741F100B6CCC8 /* GenderSwitch.h */,
 				CD1AD6141F3741F100B6CCC8 /* GenderSwitch.m */,
+				CD04C66A1F38710400E8C5D3 /* MaleFemaleSwitch.h */,
+				CD04C66B1F38710400E8C5D3 /* MaleFemaleSwitch.m */,
 			);
 			name = Switch;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				CD9767821F27219900F27A72 /* main.m in Sources */,
 				CDAF57071F2A0DEA0023558A /* AgeSelectionView.m in Sources */,
 				CDAF57101F2A0E2A0023558A /* FitnessGoalSelectionView.m in Sources */,
+				CD04C66C1F38710400E8C5D3 /* MaleFemaleSwitch.m in Sources */,
 				CDAF57041F29AEBD0023558A /* GenderSelectionView.m in Sources */,
 				CD1AD6151F3741F100B6CCC8 /* GenderSwitch.m in Sources */,
 				CD97677B1F27218900F27A72 /* ViewController.m in Sources */,
