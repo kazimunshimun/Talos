@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NumberPickerView.h"
 
-@interface AgeSelectionView : UIView
+@interface AgeSelectionView : UIView<NumberPickerDelegate>
+
+@property (nonatomic, strong) NumberPickerView *agePicker;
 
 @end

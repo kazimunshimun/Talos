@@ -32,6 +32,8 @@
 }
 
 -(void)initViews {
+
+   // self.view.backgroundColor = UIColorFromRGB(0x36393E);
     mCurrentPage = 0;
     [self.mPreviousButton setEnabled:NO];
     [self initScrollView];

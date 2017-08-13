@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MaleFemaleSwitch.h"
 
 @interface GenderSelectionView : UIView
 
+@property (nonatomic) MaleFemaleSwitch *maleFemleSwitch;
 @end

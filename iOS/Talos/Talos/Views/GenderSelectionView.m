@@ -7,8 +7,7 @@
 //
 
 #import "GenderSelectionView.h"
-#import "GenderSwitch.h"
-#import "MaleFemaleSwitch.h"
+#import "ColorUtils.h"
 
 @implementation GenderSelectionView
 
@@ -26,36 +25,23 @@
     // Drawing code
     CGRect bounds = [self bounds];
     
-    [[UIColor whiteColor] set];
+ //   [[UIColor whiteColor] set];
+    [[ColorUtils UIColorFromRGB:0x25292D] set];
+  //  [[UIColor colorWithRed:37/255.0 green:41/255.0 blue:45/255.0 alpha:1.0] set];
     UIRectFill(bounds);
     
-    /*
     // Example of a bigger switch with images
-    GenderSwitch *mySwitch2 = [[GenderSwitch alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
-    mySwitch2.center = CGPointMake(200, 200);
-   // [mySwitch2 addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
-    mySwitch2.offImage = [UIImage imageNamed:@"women"];
-    mySwitch2.onImage = [UIImage imageNamed:@"man"];
-    mySwitch2.onTintColor = [UIColor blueColor];
-  //  mySwitch2.isRounded = NO;
-    [self addSubview:mySwitch2];
-     
-    
-    // turn the switch on with animation
- //   [mySwitch2 setOn:YES animated:YES];
-    */
-    
-    // Example of a bigger switch with images
-    MaleFemaleSwitch *mySwitch2 = [[MaleFemaleSwitch alloc] init];
-    mySwitch2.center = CGPointMake(190, 200);
+    _maleFemleSwitch = [[MaleFemaleSwitch alloc] init];
+    _maleFemleSwitch.center = CGPointMake(190, 150);
     // [mySwitch2 addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
-    mySwitch2.offImage = [UIImage imageNamed:@"women"];
-    mySwitch2.onImage = [UIImage imageNamed:@"man"];
-    mySwitch2.onLabel.text = @"Male";
-    mySwitch2.offLabel.text = @"Female";
-    mySwitch2.onTintColor = [UIColor blueColor];
+    _maleFemleSwitch.offImage = [UIImage imageNamed:@"women"];
+    _maleFemleSwitch.onImage = [UIImage imageNamed:@"man"];
+    _maleFemleSwitch.onLabel.text = @"Male";
+    _maleFemleSwitch.offLabel.text = @"Female";
+    _maleFemleSwitch.onTintColor = [UIColor blueColor];
     //  mySwitch2.isRounded = NO;
-    [self addSubview:mySwitch2];
+    [self addSubview:_maleFemleSwitch];
+     [_maleFemleSwitch setOn:YES animated:YES];
 }
 
 

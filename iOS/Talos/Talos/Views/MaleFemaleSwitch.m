@@ -39,6 +39,7 @@
 #pragma mark init Methods
 
 - (id)init {
+    NSLog(@"init male female switch");
     self = [super initWithFrame:CGRectMake(0, 0, 240, 120)];
     if (self) {
         [self setup];
@@ -47,6 +48,7 @@
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
+    NSLog(@"init with coder male female switch");
     self = [super initWithCoder:aDecoder];
     if (self) {
         [self setup];
@@ -54,8 +56,8 @@
     return self;
 }
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
+    NSLog(@"init with frame male female switch");
     // use the default values if CGRectZero frame is set
     CGRect initialFrame;
     if (CGRectIsEmpty(frame)) {
@@ -76,7 +78,7 @@
  *	Setup the individual elements of the switch and set default values
  */
 - (void)setup {
-    
+    NSLog(@"setup male female switch");
     // default values
     self.on = NO;
     self.isRounded = YES;
@@ -92,12 +94,12 @@
     
     // background
     background = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-    background.backgroundColor = [UIColor clearColor];
- //   background.layer.cornerRadius = self.frame.size.height * 0.5;
+  //  background.backgroundColor = [UIColor clearColor];
+    background.layer.cornerRadius = self.frame.size.height * 0.5;
  //   background.layer.borderColor = self.borderColor.CGColor;
  //   background.layer.borderWidth = 1.0;
-  //  background.userInteractionEnabled = NO;
-//    background.clipsToBounds = YES;
+    background.userInteractionEnabled = NO;
+    background.clipsToBounds = YES;
     [self addSubview:background];
     
     // on/off images
@@ -149,7 +151,7 @@
   //  knob.layer.shadowRadius = 2.0;
   //  knob.layer.shadowOpacity = 0.5;
   //  knob.layer.shadowOffset = CGSizeMake(0, 3);
-  //  knob.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:knob.bounds cornerRadius:knob.layer.cornerRadius].CGPath;
+ //   knob.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:knob.bounds cornerRadius:knob.layer.cornerRadius].CGPath;
     knob.layer.masksToBounds = NO;
     knob.userInteractionEnabled = NO;
     [self addSubview:knob];
@@ -158,8 +160,8 @@
     thumbImageView = [[UIImageView alloc] initWithFrame:CGRectMake(30, 15, knob.frame.size.width, knob.frame.size.height)];
     thumbImageView.contentMode = UIViewContentModeCenter;
     thumbImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    offImageView.backgroundColor = [UIColor redColor];
-    [knob addSubview:thumbImageView];
+    thumbImageView.backgroundColor = [UIColor redColor];
+  //  [knob addSubview:thumbImageView];
     
     isAnimating = NO;
 }
@@ -168,6 +170,9 @@
 #pragma mark Touch Tracking
 
 - (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
+    
+    NSLog(@"begin tracking with touch male female switch");
+    
     [super beginTrackingWithTouch:touch withEvent:event];
     
     startTrackingValue = self.on;
@@ -178,14 +183,15 @@
     isAnimating = YES;
     [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
         if (self.on) {
-            knob.frame = CGRectMake(150 - (activeKnobWidth + 1), knob.frame.origin.y, activeKnobWidth, knob.frame.size.height);
-            background.backgroundColor = self.onTintColor;
-            knob.backgroundColor = self.onThumbTintColor;
-        }
-        else {
+            NSLog(@"animation in begin on knob frame, x: %f y:%f", 150 - (activeKnobWidth + 1), knob.frame.origin.y);
+            knob.frame = CGRectMake(150 , knob.frame.origin.y, activeKnobWidth, knob.frame.size.height);
+         //   background.backgroundColor = self.onTintColor;
+         //   knob.backgroundColor = self.onThumbTintColor;
+        } else {
+            NSLog(@"animation in begin off knob frame, x: %f y:%f", knob.frame.origin.x, knob.frame.origin.y);
             knob.frame = CGRectMake(knob.frame.origin.x, knob.frame.origin.y, activeKnobWidth, knob.frame.size.height);
-            background.backgroundColor = self.activeColor;
-            knob.backgroundColor = self.thumbTintColor;
+          //  background.backgroundColor = self.activeColor;
+          //  knob.backgroundColor = self.thumbTintColor;
         }
     } completion:^(BOOL finished) {
         isAnimating = NO;
@@ -195,6 +201,8 @@
 }
 
 - (BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
+    
+    NSLog(@"continue tracking with touch male female switch");
     [super continueTrackingWithTouch:touch withEvent:event];
     
     // Get touch location
@@ -219,6 +227,7 @@
 }
 
 - (void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
+    NSLog(@"end tracking with touch male female switch");
     [super endTrackingWithTouch:touch withEvent:event];
     
     BOOL previousValue = self.on;
@@ -235,6 +244,7 @@
 }
 
 - (void)cancelTrackingWithEvent:(UIEvent *)event {
+    NSLog(@"cancel tracking with event male female switch");
     [super cancelTrackingWithEvent:event];
     
     // just animate back to the original value
@@ -246,6 +256,7 @@
 
 
 - (void)layoutSubviews {
+    NSLog(@"layout subviews male female switch");
     [super layoutSubviews];
     
     if (!isAnimating) {
@@ -428,38 +439,43 @@
  * optionally make it animated
  */
 - (void)showOn:(BOOL)animated {
+    NSLog(@"showON male female switch");
     CGFloat normalKnobWidth = 60;
     CGFloat activeKnobWidth = normalKnobWidth + 5;
     if (animated) {
         isAnimating = YES;
         [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
             if (self.tracking)
-                knob.frame = CGRectMake(150 - (activeKnobWidth + 1), knob.frame.origin.y, activeKnobWidth, knob.frame.size.height);
+                knob.frame = CGRectMake(150, knob.frame.origin.y, activeKnobWidth, knob.frame.size.height);
             else
-                knob.frame = CGRectMake(150 - (normalKnobWidth + 1), knob.frame.origin.y, normalKnobWidth, knob.frame.size.height);
-            background.backgroundColor = self.onTintColor;
-            background.layer.borderColor = self.onTintColor.CGColor;
-            knob.backgroundColor = self.onThumbTintColor;
+                knob.frame = CGRectMake(150, knob.frame.origin.y, normalKnobWidth, knob.frame.size.height);
+        //    background.backgroundColor = self.onTintColor;
+        //    background.layer.borderColor = self.onTintColor.CGColor;
+        //    knob.backgroundColor = self.onThumbTintColor;
             onImageView.alpha = 1.0;
             offImageView.alpha = 1.0;
-            self.onLabel.alpha = 1.0;
-            self.offLabel.alpha = 0;
+          //  self.onLabel.alpha = 1.0;
+          //  self.offLabel.alpha = 0;
+            self.onLabel.textColor = [UIColor darkGrayColor];
+            self.offLabel.textColor = [UIColor lightGrayColor];
         } completion:^(BOOL finished) {
             isAnimating = NO;
         }];
     }
     else {
         if (self.tracking)
-            knob.frame = CGRectMake(150 - (activeKnobWidth + 1), knob.frame.origin.y, activeKnobWidth, knob.frame.size.height);
+            knob.frame = CGRectMake(30, knob.frame.origin.y, activeKnobWidth, knob.frame.size.height);
         else
-            knob.frame = CGRectMake(150 - (normalKnobWidth + 1), knob.frame.origin.y, normalKnobWidth, knob.frame.size.height);
-        background.backgroundColor = self.onTintColor;
-        background.layer.borderColor = self.onTintColor.CGColor;
-        knob.backgroundColor = self.onThumbTintColor;
+            knob.frame = CGRectMake(30, knob.frame.origin.y, normalKnobWidth, knob.frame.size.height);
+     //   background.backgroundColor = self.onTintColor;
+     //   background.layer.borderColor = self.onTintColor.CGColor;
+     //   knob.backgroundColor = self.onThumbTintColor;
         onImageView.alpha = 1.0;
         offImageView.alpha = 1.0;
-        self.onLabel.alpha = 1.0;
-        self.offLabel.alpha = 0;
+        self.onLabel.textColor = [UIColor darkGrayColor];
+        self.offLabel.textColor = [UIColor lightGrayColor];
+     //   self.onLabel.alpha = 1.0;
+     //   self.offLabel.alpha = 0;
     }
     
     currentVisualValue = YES;
@@ -471,44 +487,49 @@
  * optionally make it animated
  */
 - (void)showOff:(BOOL)animated {
+    NSLog(@"showOFF male female switch");
     CGFloat normalKnobWidth = 60;
     CGFloat activeKnobWidth = normalKnobWidth + 5;
     if (animated) {
         isAnimating = YES;
         [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
             if (self.tracking) {
-                knob.frame = CGRectMake(1, knob.frame.origin.y, activeKnobWidth, knob.frame.size.height);
-                background.backgroundColor = self.activeColor;
+                knob.frame = CGRectMake(30, knob.frame.origin.y, activeKnobWidth, knob.frame.size.height);
+             //   background.backgroundColor = self.activeColor;
             }
             else {
-                knob.frame = CGRectMake(1, knob.frame.origin.y, normalKnobWidth, knob.frame.size.height);
-                background.backgroundColor = self.inactiveColor;
+                knob.frame = CGRectMake(30, knob.frame.origin.y, normalKnobWidth, knob.frame.size.height);
+             //   background.backgroundColor = self.inactiveColor;
             }
-            background.layer.borderColor = self.borderColor.CGColor;
-            knob.backgroundColor = self.thumbTintColor;
+          //  background.layer.borderColor = self.borderColor.CGColor;
+          //  knob.backgroundColor = self.thumbTintColor;
             onImageView.alpha = 1.0;
             offImageView.alpha = 1.0;
-            self.onLabel.alpha = 0;
-            self.offLabel.alpha = 1.0;
+        //    self.onLabel.alpha = 0;
+        //    self.offLabel.alpha = 1.0;
+            self.onLabel.textColor = [UIColor lightGrayColor];
+            self.offLabel.textColor = [UIColor darkGrayColor];
         } completion:^(BOOL finished) {
             isAnimating = NO;
         }];
     }
     else {
         if (self.tracking) {
-            knob.frame = CGRectMake(1, knob.frame.origin.y, activeKnobWidth, knob.frame.size.height);
-            background.backgroundColor = self.activeColor;
+            knob.frame = CGRectMake(30, knob.frame.origin.y, activeKnobWidth, knob.frame.size.height);
+         //   background.backgroundColor = self.activeColor;
         }
         else {
-            knob.frame = CGRectMake(1, knob.frame.origin.y, normalKnobWidth, knob.frame.size.height);
-            background.backgroundColor = self.inactiveColor;
+            knob.frame = CGRectMake(30, knob.frame.origin.y, normalKnobWidth, knob.frame.size.height);
+          //  background.backgroundColor = self.inactiveColor;
         }
-        background.layer.borderColor = self.borderColor.CGColor;
-        knob.backgroundColor = self.thumbTintColor;
+      //  background.layer.borderColor = self.borderColor.CGColor;
+      //  knob.backgroundColor = self.thumbTintColor;
         onImageView.alpha = 1.0;
         offImageView.alpha = 1.0;
-        self.onLabel.alpha = 0;
-        self.offLabel.alpha = 1.0;
+      //  self.onLabel.alpha = 0;
+      //  self.offLabel.alpha = 1.0;
+        self.onLabel.textColor = [UIColor lightGrayColor];
+        self.offLabel.textColor = [UIColor darkGrayColor];
     }
     
     currentVisualValue = NO;

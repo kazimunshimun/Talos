@@ -135,13 +135,14 @@
     knob.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:knob.bounds cornerRadius:knob.layer.cornerRadius].CGPath;
     knob.layer.masksToBounds = NO;
     knob.userInteractionEnabled = NO;
+    knob.alpha = 0.5;
     [self addSubview:knob];
     
     // kob image
     thumbImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, knob.frame.size.width, knob.frame.size.height)];
     thumbImageView.contentMode = UIViewContentModeCenter;
     thumbImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    [knob addSubview:thumbImageView];
+  //  [knob addSubview:thumbImageView];
     
     isAnimating = NO;
 }
@@ -424,9 +425,9 @@
             background.layer.borderColor = self.onTintColor.CGColor;
             knob.backgroundColor = self.onThumbTintColor;
             onImageView.alpha = 1.0;
-            offImageView.alpha = 0;
+            offImageView.alpha = 1.0;
             self.onLabel.alpha = 1.0;
-            self.offLabel.alpha = 0;
+            self.offLabel.alpha = 1.0;
         } completion:^(BOOL finished) {
             isAnimating = NO;
         }];
@@ -440,9 +441,9 @@
         background.layer.borderColor = self.onTintColor.CGColor;
         knob.backgroundColor = self.onThumbTintColor;
         onImageView.alpha = 1.0;
-        offImageView.alpha = 0;
+        offImageView.alpha = 1.0;
         self.onLabel.alpha = 1.0;
-        self.offLabel.alpha = 0;
+        self.offLabel.alpha = 1.0;
     }
     
     currentVisualValue = YES;
@@ -469,9 +470,9 @@
             }
             background.layer.borderColor = self.borderColor.CGColor;
             knob.backgroundColor = self.thumbTintColor;
-            onImageView.alpha = 0;
+            onImageView.alpha = 1.0;
             offImageView.alpha = 1.0;
-            self.onLabel.alpha = 0;
+            self.onLabel.alpha = 1.0;
             self.offLabel.alpha = 1.0;
         } completion:^(BOOL finished) {
             isAnimating = NO;
@@ -488,9 +489,9 @@
         }
         background.layer.borderColor = self.borderColor.CGColor;
         knob.backgroundColor = self.thumbTintColor;
-        onImageView.alpha = 0;
+        onImageView.alpha = 1.0;
         offImageView.alpha = 1.0;
-        self.onLabel.alpha = 0;
+        self.onLabel.alpha = 1.0;
         self.offLabel.alpha = 1.0;
     }
     

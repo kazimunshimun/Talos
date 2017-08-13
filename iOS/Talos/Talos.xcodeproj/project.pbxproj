@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		CD04C66C1F38710400E8C5D3 /* MaleFemaleSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = CD04C66B1F38710400E8C5D3 /* MaleFemaleSwitch.m */; };
 		CD1AD6151F3741F100B6CCC8 /* GenderSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1AD6141F3741F100B6CCC8 /* GenderSwitch.m */; };
+		CD82787C1F401A870082D140 /* ColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CD82787B1F401A870082D140 /* ColorUtils.m */; };
+		CD8278801F40311F0082D140 /* NumberPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD82787F1F40311F0082D140 /* NumberPickerView.m */; };
+		CD8278841F4032D40082D140 /* NumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8278831F4032D40082D140 /* NumberCell.m */; };
 		CD9767621F271E4900F27A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9767601F271E4900F27A72 /* Main.storyboard */; };
 		CD9767641F271E4900F27A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9767631F271E4900F27A72 /* Assets.xcassets */; };
 		CD9767671F271E4900F27A72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9767651F271E4900F27A72 /* LaunchScreen.storyboard */; };
@@ -28,6 +31,12 @@
 		CD04C66B1F38710400E8C5D3 /* MaleFemaleSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaleFemaleSwitch.m; sourceTree = "<group>"; };
 		CD1AD6131F3741F100B6CCC8 /* GenderSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenderSwitch.h; sourceTree = "<group>"; };
 		CD1AD6141F3741F100B6CCC8 /* GenderSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenderSwitch.m; sourceTree = "<group>"; };
+		CD82787A1F401A870082D140 /* ColorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUtils.h; sourceTree = "<group>"; };
+		CD82787B1F401A870082D140 /* ColorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUtils.m; sourceTree = "<group>"; };
+		CD82787E1F40311F0082D140 /* NumberPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberPickerView.h; sourceTree = "<group>"; };
+		CD82787F1F40311F0082D140 /* NumberPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberPickerView.m; sourceTree = "<group>"; };
+		CD8278821F4032D40082D140 /* NumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberCell.h; sourceTree = "<group>"; };
+		CD8278831F4032D40082D140 /* NumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberCell.m; sourceTree = "<group>"; };
 		CD9767541F271E4900F27A72 /* Talos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9767611F271E4900F27A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD9767631F271E4900F27A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +79,25 @@
 				CD04C66B1F38710400E8C5D3 /* MaleFemaleSwitch.m */,
 			);
 			name = Switch;
+			sourceTree = "<group>";
+		};
+		CD82787D1F4030E40082D140 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				CD8278811F40328E0082D140 /* NumberCell */,
+				CD82787E1F40311F0082D140 /* NumberPickerView.h */,
+				CD82787F1F40311F0082D140 /* NumberPickerView.m */,
+			);
+			name = Picker;
+			sourceTree = "<group>";
+		};
+		CD8278811F40328E0082D140 /* NumberCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD8278821F4032D40082D140 /* NumberCell.h */,
+				CD8278831F4032D40082D140 /* NumberCell.m */,
+			);
+			name = NumberCell;
 			sourceTree = "<group>";
 		};
 		CD97674B1F271E4800F27A72 = {
@@ -190,6 +218,8 @@
 		CD9767771F27213E00F27A72 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CD82787A1F401A870082D140 /* ColorUtils.h */,
+				CD82787B1F401A870082D140 /* ColorUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -197,6 +227,7 @@
 		CD9767781F27213E00F27A72 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CD82787D1F4030E40082D140 /* Picker */,
 				CD1AD6121F3741D300B6CCC8 /* Switch */,
 				CDAF57011F29AE7E0023558A /* Walkthrough */,
 			);
@@ -302,7 +333,9 @@
 			files = (
 				CD97677E1F27219100F27A72 /* AppDelegate.m in Sources */,
 				CDAF570D1F2A0E170023558A /* HeightSelectionView.m in Sources */,
+				CD8278841F4032D40082D140 /* NumberCell.m in Sources */,
 				CDAF570A1F2A0E060023558A /* WeightSelectionView.m in Sources */,
+				CD82787C1F401A870082D140 /* ColorUtils.m in Sources */,
 				CD9767821F27219900F27A72 /* main.m in Sources */,
 				CDAF57071F2A0DEA0023558A /* AgeSelectionView.m in Sources */,
 				CDAF57101F2A0E2A0023558A /* FitnessGoalSelectionView.m in Sources */,
@@ -310,6 +343,7 @@
 				CDAF57041F29AEBD0023558A /* GenderSelectionView.m in Sources */,
 				CD1AD6151F3741F100B6CCC8 /* GenderSwitch.m in Sources */,
 				CD97677B1F27218900F27A72 /* ViewController.m in Sources */,
+				CD8278801F40311F0082D140 /* NumberPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
